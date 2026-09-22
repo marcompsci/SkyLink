@@ -66,6 +66,7 @@ SkyLink/
 ├── agents/                 agent system prompts, one per file, ready to load
 ├── schema/                 database schema and seed data
 ├── design/                 brand tokens and diagram standards
+├── ios/                    Swift sources — widget extension + shared layer
 └── .github/                issue and PR templates
 ```
 
@@ -101,6 +102,12 @@ and there are plenty of those.
 
 If you want to help and you know cars, [guide content](.github/ISSUE_TEMPLATE/guide-content.md)
 is where you are most useful.
+
+## Code
+
+[`ios/`](ios/) holds the widget extension and the shared model layer it reads
+from — the first slice of real code. It has not been compiled yet; see
+[`ios/README.md`](ios/README.md) for Xcode setup.
 
 ## Contributing
 
