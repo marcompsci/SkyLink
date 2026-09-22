@@ -1,0 +1,566 @@
+{
+  "version": "0.1",
+  "source": "docs/04-category-tree.md",
+  "categories": [
+    {
+      "slug": "fluids-filters",
+      "title": "Fluids & Filters",
+      "icon": "drop",
+      "sort_order": 1,
+      "guides": [
+        {
+          "slug": "check-engine-oil",
+          "title": "Check engine oil level",
+          "difficulty": "green",
+          "minutes": 3
+        },
+        {
+          "slug": "oil-filter-change",
+          "title": "Oil & filter change",
+          "difficulty": "yellow",
+          "minutes": 45
+        },
+        {
+          "slug": "check-coolant",
+          "title": "Check / top off coolant",
+          "difficulty": "green",
+          "minutes": 5
+        },
+        {
+          "slug": "coolant-flush",
+          "title": "Coolant flush",
+          "difficulty": "orange",
+          "minutes": 120
+        },
+        {
+          "slug": "brake-fluid-check",
+          "title": "Brake fluid check & top-off",
+          "difficulty": "green",
+          "minutes": 5
+        },
+        {
+          "slug": "transmission-fluid-check",
+          "title": "Transmission fluid check",
+          "difficulty": "yellow",
+          "minutes": 15
+        },
+        {
+          "slug": "power-steering-fluid",
+          "title": "Power steering fluid",
+          "difficulty": "green",
+          "minutes": 5
+        },
+        {
+          "slug": "washer-fluid",
+          "title": "Windshield washer fluid",
+          "difficulty": "green",
+          "minutes": 2
+        },
+        {
+          "slug": "engine-air-filter",
+          "title": "Engine air filter",
+          "difficulty": "green",
+          "minutes": 10
+        },
+        {
+          "slug": "cabin-air-filter",
+          "title": "Cabin air filter",
+          "difficulty": "green",
+          "minutes": 15
+        },
+        {
+          "slug": "fuel-filter",
+          "title": "Fuel filter replacement",
+          "difficulty": "orange",
+          "minutes": 60
+        }
+      ]
+    },
+    {
+      "slug": "tires-wheels",
+      "title": "Tires & Wheels",
+      "icon": "circle",
+      "sort_order": 2,
+      "guides": [
+        {
+          "slug": "tire-pressure",
+          "title": "Check tire pressure & inflate",
+          "difficulty": "green",
+          "minutes": 10
+        },
+        {
+          "slug": "tire-size-date",
+          "title": "Read tire size and date code",
+          "difficulty": "green",
+          "minutes": 3
+        },
+        {
+          "slug": "tread-depth",
+          "title": "Check tread depth (penny test)",
+          "difficulty": "green",
+          "minutes": 5
+        },
+        {
+          "slug": "change-flat",
+          "title": "Change a flat to the spare",
+          "difficulty": "yellow",
+          "minutes": 30
+        },
+        {
+          "slug": "tire-plug",
+          "title": "Use a tire plug kit",
+          "difficulty": "yellow",
+          "minutes": 25
+        },
+        {
+          "slug": "rotate-tires",
+          "title": "Rotate tires",
+          "difficulty": "yellow",
+          "minutes": 60
+        },
+        {
+          "slug": "reset-tpms",
+          "title": "Reset TPMS light",
+          "difficulty": "green",
+          "minutes": 10
+        },
+        {
+          "slug": "vibration-by-speed",
+          "title": "Diagnose a vibration by speed",
+          "difficulty": "yellow",
+          "minutes": 20
+        },
+        {
+          "slug": "wheel-alignment",
+          "title": "Wheel alignment - when you need one",
+          "difficulty": "red",
+          "minutes": null
+        }
+      ]
+    },
+    {
+      "slug": "battery-electrical",
+      "title": "Battery & Electrical",
+      "icon": "bolt",
+      "sort_order": 3,
+      "guides": [
+        {
+          "slug": "jump-start",
+          "title": "Jump-start a dead battery",
+          "difficulty": "yellow",
+          "minutes": 15
+        },
+        {
+          "slug": "test-battery",
+          "title": "Test battery health",
+          "difficulty": "yellow",
+          "minutes": 10
+        },
+        {
+          "slug": "clean-terminals",
+          "title": "Clean corroded terminals",
+          "difficulty": "yellow",
+          "minutes": 20
+        },
+        {
+          "slug": "replace-battery",
+          "title": "Replace the battery",
+          "difficulty": "yellow",
+          "minutes": 30
+        },
+        {
+          "slug": "battery-or-alternator",
+          "title": "Is it the battery or the alternator?",
+          "difficulty": "yellow",
+          "minutes": 15
+        },
+        {
+          "slug": "replace-fuse",
+          "title": "Replace a blown fuse",
+          "difficulty": "green",
+          "minutes": 10
+        },
+        {
+          "slug": "find-fuse-box",
+          "title": "Find the fuse box and read the map",
+          "difficulty": "green",
+          "minutes": 5
+        },
+        {
+          "slug": "replace-bulb",
+          "title": "Replace headlight / taillight bulb",
+          "difficulty": "yellow",
+          "minutes": 20
+        },
+        {
+          "slug": "starter-alternator",
+          "title": "Starter and alternator symptoms",
+          "difficulty": "red",
+          "minutes": null
+        }
+      ]
+    },
+    {
+      "slug": "brakes",
+      "title": "Brakes",
+      "icon": "disc",
+      "sort_order": 4,
+      "guides": [
+        {
+          "slug": "brake-noise",
+          "title": "What that squeal / grind means",
+          "difficulty": "green",
+          "minutes": 5
+        },
+        {
+          "slug": "inspect-pads",
+          "title": "Inspect pad thickness through the wheel",
+          "difficulty": "yellow",
+          "minutes": 15
+        },
+        {
+          "slug": "front-brake-pads",
+          "title": "Replace front brake pads",
+          "difficulty": "orange",
+          "minutes": 120
+        },
+        {
+          "slug": "replace-rotors",
+          "title": "Replace rotors",
+          "difficulty": "orange",
+          "minutes": 180
+        },
+        {
+          "slug": "bleed-brakes",
+          "title": "Bleed the brakes",
+          "difficulty": "orange",
+          "minutes": 60
+        },
+        {
+          "slug": "soft-pedal",
+          "title": "Soft or sinking pedal",
+          "difficulty": "red",
+          "minutes": null
+        },
+        {
+          "slug": "parking-brake",
+          "title": "Parking brake adjustment",
+          "difficulty": "orange",
+          "minutes": 60
+        }
+      ]
+    },
+    {
+      "slug": "engine-performance",
+      "title": "Engine & Performance",
+      "icon": "engine",
+      "sort_order": 5,
+      "guides": [
+        {
+          "slug": "spark-plugs",
+          "title": "Replace spark plugs",
+          "difficulty": "orange",
+          "minutes": 90
+        },
+        {
+          "slug": "ignition-coils",
+          "title": "Replace ignition coils",
+          "difficulty": "orange",
+          "minutes": 60
+        },
+        {
+          "slug": "belt-inspection",
+          "title": "Serpentine belt inspection",
+          "difficulty": "yellow",
+          "minutes": 10
+        },
+        {
+          "slug": "belt-replacement",
+          "title": "Serpentine belt replacement",
+          "difficulty": "orange",
+          "minutes": 90
+        },
+        {
+          "slug": "rough-idle",
+          "title": "Rough idle - what to check first",
+          "difficulty": "yellow",
+          "minutes": 30
+        },
+        {
+          "slug": "misfire-triage",
+          "title": "Engine misfire triage",
+          "difficulty": "yellow",
+          "minutes": 30
+        },
+        {
+          "slug": "throttle-body",
+          "title": "Clean the throttle body",
+          "difficulty": "orange",
+          "minutes": 60
+        },
+        {
+          "slug": "timing-belt",
+          "title": "Timing belt - why it matters",
+          "difficulty": "red",
+          "minutes": null
+        },
+        {
+          "slug": "overheating-now",
+          "title": "Overheating - what to do right now",
+          "difficulty": "green",
+          "minutes": 10
+        }
+      ]
+    },
+    {
+      "slug": "warning-lights",
+      "title": "Warning Lights & Dashboard",
+      "icon": "warning",
+      "sort_order": 6,
+      "guides": [
+        {
+          "slug": "check-engine-light",
+          "title": "Check engine light - solid vs flashing",
+          "difficulty": "green",
+          "minutes": 5
+        },
+        {
+          "slug": "oil-pressure-light",
+          "title": "Oil pressure light - pull over now",
+          "difficulty": "green",
+          "minutes": 2
+        },
+        {
+          "slug": "temperature-warning",
+          "title": "Temperature warning",
+          "difficulty": "green",
+          "minutes": 5
+        },
+        {
+          "slug": "battery-light",
+          "title": "Battery / charging light",
+          "difficulty": "green",
+          "minutes": 5
+        },
+        {
+          "slug": "abs-traction",
+          "title": "ABS and traction control lights",
+          "difficulty": "green",
+          "minutes": 5
+        },
+        {
+          "slug": "airbag-srs",
+          "title": "Airbag / SRS light",
+          "difficulty": "green",
+          "minutes": 5
+        },
+        {
+          "slug": "tpms-light",
+          "title": "TPMS light",
+          "difficulty": "green",
+          "minutes": 5
+        },
+        {
+          "slug": "identify-by-photo",
+          "title": "Identify any light by photo",
+          "difficulty": "green",
+          "minutes": 1
+        }
+      ]
+    },
+    {
+      "slug": "hvac",
+      "title": "Heating, Cooling & Comfort",
+      "icon": "fan",
+      "sort_order": 7,
+      "guides": [
+        {
+          "slug": "ac-warm",
+          "title": "AC blowing warm - first checks",
+          "difficulty": "yellow",
+          "minutes": 20
+        },
+        {
+          "slug": "ac-recharge",
+          "title": "Recharge AC refrigerant",
+          "difficulty": "orange",
+          "minutes": 45
+        },
+        {
+          "slug": "heater-cold",
+          "title": "Heater blowing cold",
+          "difficulty": "yellow",
+          "minutes": 20
+        },
+        {
+          "slug": "defroster",
+          "title": "Defroster not clearing",
+          "difficulty": "green",
+          "minutes": 10
+        },
+        {
+          "slug": "blower-motor",
+          "title": "Blower motor not working",
+          "difficulty": "orange",
+          "minutes": 60
+        },
+        {
+          "slug": "cabin-smells",
+          "title": "Cabin smells (musty, sweet, burning)",
+          "difficulty": "green",
+          "minutes": 10
+        }
+      ]
+    },
+    {
+      "slug": "exterior-glass",
+      "title": "Exterior, Wipers & Glass",
+      "icon": "wiper",
+      "sort_order": 8,
+      "guides": [
+        {
+          "slug": "wiper-blades",
+          "title": "Replace wiper blades",
+          "difficulty": "green",
+          "minutes": 10
+        },
+        {
+          "slug": "wiper-streaking",
+          "title": "Wiper streaking and chatter",
+          "difficulty": "green",
+          "minutes": 10
+        },
+        {
+          "slug": "windshield-chip",
+          "title": "Fix a windshield chip",
+          "difficulty": "yellow",
+          "minutes": 30
+        },
+        {
+          "slug": "foggy-headlights",
+          "title": "Restore foggy headlights",
+          "difficulty": "yellow",
+          "minutes": 45
+        },
+        {
+          "slug": "paint-scratch",
+          "title": "Touch up a paint scratch",
+          "difficulty": "yellow",
+          "minutes": 60
+        },
+        {
+          "slug": "mirror-glass",
+          "title": "Replace a side mirror glass",
+          "difficulty": "yellow",
+          "minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "seasonal-preventive",
+      "title": "Seasonal & Preventive",
+      "icon": "calendar",
+      "sort_order": 9,
+      "guides": [
+        {
+          "slug": "winter-readiness",
+          "title": "Winter readiness checklist",
+          "difficulty": "green",
+          "minutes": 30
+        },
+        {
+          "slug": "summer-readiness",
+          "title": "Summer / heat readiness",
+          "difficulty": "green",
+          "minutes": 30
+        },
+        {
+          "slug": "road-trip-inspection",
+          "title": "Pre-road-trip inspection",
+          "difficulty": "green",
+          "minutes": 45
+        },
+        {
+          "slug": "storing-a-car",
+          "title": "Storing a car for months",
+          "difficulty": "yellow",
+          "minutes": 60
+        },
+        {
+          "slug": "mileage-schedule",
+          "title": "Mileage service schedule (30/60/90k)",
+          "difficulty": "green",
+          "minutes": 10
+        },
+        {
+          "slug": "monthly-walkaround",
+          "title": "Monthly five-minute walkaround",
+          "difficulty": "green",
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "slug": "roadside-emergencies",
+      "title": "Roadside Emergencies",
+      "icon": "sos",
+      "sort_order": 10,
+      "guides": [
+        {
+          "slug": "wont-start",
+          "title": "Car won't start - decision tree",
+          "difficulty": "green",
+          "minutes": 10
+        },
+        {
+          "slug": "flat-on-shoulder",
+          "title": "Flat tire on the shoulder",
+          "difficulty": "yellow",
+          "minutes": 30
+        },
+        {
+          "slug": "overheating-road",
+          "title": "Overheating on the road",
+          "difficulty": "green",
+          "minutes": 15
+        },
+        {
+          "slug": "out-of-fuel",
+          "title": "Out of fuel",
+          "difficulty": "green",
+          "minutes": 10
+        },
+        {
+          "slug": "locked-out",
+          "title": "Locked out",
+          "difficulty": "green",
+          "minutes": 5
+        },
+        {
+          "slug": "stuck-snow-sand",
+          "title": "Stuck in snow, sand or mud",
+          "difficulty": "yellow",
+          "minutes": 30
+        },
+        {
+          "slug": "minor-collision",
+          "title": "After a minor collision",
+          "difficulty": "green",
+          "minutes": 20
+        },
+        {
+          "slug": "smoke-burning-smell",
+          "title": "Smoke or burning smell",
+          "difficulty": "green",
+          "minutes": 2
+        },
+        {
+          "slug": "trunk-emergency-kit",
+          "title": "Build a trunk emergency kit",
+          "difficulty": "green",
+          "minutes": 30
+        }
+      ]
+    }
+  ]
+}
