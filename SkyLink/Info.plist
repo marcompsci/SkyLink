@@ -2,9 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>SkyLink listens to your voice so you can ask questions about your car hands-free.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>SkyLink uses speech recognition to understand your voice commands and questions.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>SkyLink uses your location to find nearby parts stores and to share your exact position in roadside emergencies.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>SkyLink connects to your OBD-II Bluetooth adapter to read your vehicle's real fault codes and live engine data.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
+		<string>location</string>
+		<string>bluetooth-central</string>
 	</array>
 </dict>
 </plist>

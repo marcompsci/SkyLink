@@ -1,18 +1,1 @@
-//
-//  Item.swift
-//  SkyLink
-//
-//  Created by Omari Bell on 9/22/26.
-//
-
-import Foundation
-import SwiftData
-
-@Model
-final class Item {
-    var timestamp: Date
-    
-    init(timestamp: Date) {
-        self.timestamp = timestamp
-    }
-}
+// Template Item model removed — replaced by Vehicle, FaultCode, SOSSession, MindFlowEntry in Models.swift
