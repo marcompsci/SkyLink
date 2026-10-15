@@ -1,6 +1,6 @@
 # 13. Parts Finder & Live Map
 
-[← Roadmap](12-roadmap.md) · [Index](README.md)
+[← Roadmap](12-roadmap.md) · [Index](README.md) · Next: [Auto →](14-auto-the-mechanic.md)
 
 A guide tells you the plug is 17 mm. Parts Finder tells you where to buy the filter,
 what it costs at five places, and how to get to the cheapest one. It closes the loop

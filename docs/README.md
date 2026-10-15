@@ -17,6 +17,8 @@ The full spec, one file per section. Read in order, or jump to what you need.
 | 11 | [Safety & ethics](11-safety-and-ethics.md) | Hard-stop list, escalation, privacy, charter |
 | 12 | [Roadmap](12-roadmap.md) | The road to 1.0, release order, open questions |
 | 13 | [Parts Finder](13-parts-finder.md) | Cheapest parts nearby, live map, navigation |
+| 14 | [Auto](14-auto-the-mechanic.md) | The pocket mechanic — character, Apple Intelligence split, Maps handoff |
+| 15 | [Pocket Garage](15-pocket-garage.md) | Onboarding, the garage home screen, reminders |
 
 Single-file version for reading offline or feeding to an LLM:
 [`/spec/SkyLink-Master-Spec-v0.2.md`](../spec/SkyLink-Master-Spec-v0.2.md).

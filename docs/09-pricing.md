@@ -16,7 +16,11 @@ Three tiers. Prices below are a recommendation, not a decision.
 | OBD-II code read | Yes | Yes | Yes |
 | Live OBD data | No | Yes | Yes |
 | Scan history | Last 1 | Unlimited | Unlimited + fleet trends |
-| Service history log | No | Yes | Yes + export |
+| Reminders (date + mileage) | **Yes** | Yes | Yes |
+| Service history log | **Yes** | Yes | Yes + PDF export |
+| Recall alerts | **Yes** | Yes | Yes |
+| Fuel / cost analytics | No | Yes | Yes |
+| Parts tracking | No | Yes | Yes |
 | Offline guide cache | 3 guides | 30 days of opened guides | Everything |
 | Voice mode | Yes | Yes | Yes |
 | Photo diagnosis | 3 total | Unlimited | Unlimited |
@@ -32,6 +36,11 @@ never see a paywall. It is also the best marketing the app will ever have.
 
 **Reading a check-engine code.** The scan and the plain-language explanation are free.
 What the meter counts is the open-ended conversation about it.
+
+**Remembering things for you.** Reminders, service history, and recall alerts are free
+and stay free. Paywalling reminders is the most-complained-about move in this entire
+category — see [section 15](15-pocket-garage.md). The meter counts AI conversations, not
+memory. It is also what gets someone to open the app in a month when nothing is wrong.
 
 ## What counts as an "AI search"
 

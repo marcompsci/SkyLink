@@ -14,29 +14,45 @@ Mark: a single unbroken link form that also reads as a road curving to a horizon
 geometric, legible at 20pt on a dashboard mount. Two lockups — mark alone for the app
 icon, mark plus wordmark for everything else. No sub-brands: there is one product.
 
-## Palette
+## Palette — pocket garage
 
-Carried from the HaloFlow palette, extended for the states a car app needs.
+The feel is a tool chest, not a dashboard: deep charcoal, chrome, hazard stripes, and
+one hot accent that carries every action. Dark-first, because this gets used in engine
+bays, parking garages, and on shoulders at night.
 
 | Token | Hex | Use |
 | --- | --- | --- |
-| Signal Teal | `#3CE0C9` | Primary action, active state, brand accent |
-| Midnight | `#0A0F1A` | Dark-mode ground, text on light |
-| Silver | `#DDE5E8` | Light-mode ground, dividers, dimmed diagram layers |
-| Coral | `#FF7A6A` | Warnings, "get it checked soon" |
-| Stop Red | `#E03C3C` | SOS button, "stop driving now" |
-| Caution Amber | `#F2B138` | "Don't drive far", pending codes |
-| Safe Green | `#3CCB7F` | "Safe to drive", completed steps |
+| Garage Black | `#121419` | Ground |
+| Steel | `#1C2028` | Cards, raised surfaces |
+| Chrome | `#DDE3EA` | Primary text, diagram line work |
+| **Torque Orange** | `#FF6B2C` | Primary action, Auto's accent — the hot one |
+| **Shop Yellow** | `#FFC53D` | Hazard stripes, caution, "get it checked soon" |
+| Oil Teal | `#19C3B2` | Secondary action, "safe to drive", completed steps |
+| Stop Red | `#E8402A` | SOS, "stop driving now" |
+| Safe Green | `#3ECF8E` | Confirmations, passed checks |
+| Grease | `#6B7480` | Secondary text, dimmed diagram layers |
 
-Dark mode is the default. People use this app in engine bays, in parking garages, and on
-shoulders at night, and a white screen at 2am is hostile.
+**The hazard stripe** — 45 degrees, Shop Yellow on Garage Black — is the signature
+motif. It appears as a thin band at the top of a screen and around the SOS button, and
+nowhere else. Used sparingly it reads as a workshop; used everywhere it reads as a
+construction site.
 
-Severity color is never the only signal. Every state carries an icon and a word.
+**Torque Orange is the only primary action colour.** If two things on a screen are
+orange, one of them is wrong.
+
+Severity colour is never the only signal. Every state carries an icon and a word, and
+Auto's face is the fourth channel — see [section 14](14-auto-the-mechanic.md).
+
+### Type
+
+Archivo for everything: Archivo Black weights for display, Archivo Narrow for the
+small-caps labels and data. It is a grotesque with industrial bones — closer to a shop
+sign than a tech startup.
 
 ## Typography
 
-Geometric sans for the wordmark. In-app, SF Pro (system) so Dynamic Type works properly
-at every accessibility size. Step instructions set at a minimum of 20pt, and SOS text at
+Archivo for the wordmark and display. In-app, SF Pro (system) wherever Dynamic Type
+must scale cleanly at accessibility sizes. Step instructions set at a minimum of 20pt, and SOS text at
 28pt minimum. Tabular figures for torque specs, capacities, and pressures.
 
 ## Illustration style for diagrams
