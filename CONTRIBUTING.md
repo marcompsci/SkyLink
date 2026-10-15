@@ -6,9 +6,9 @@ content.
 
 ## Before you start
 
-1. Read [docs/01](docs/01-product-overview.md) and [docs/13](docs/13-roadmap.md). Fifteen
+1. Read [docs/01](docs/01-product-overview.md) and [docs/12](docs/11-roadmap.md). Fifteen
    minutes.
-2. Read [docs/12](docs/12-safety-and-ethics.md) before touching anything agent-related
+2. Read [docs/11](docs/10-safety-and-ethics.md) before touching anything agent-related
    or content-related. It is a build requirement, not boilerplate.
 3. Open an issue before a large PR so we can agree on the shape first.
 

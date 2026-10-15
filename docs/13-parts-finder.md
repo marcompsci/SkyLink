@@ -1,6 +1,6 @@
-# 15. Parts Finder & Live Map
+# 13. Parts Finder & Live Map
 
-[← MindFlow](14-mindflow.md) · [Index](README.md)
+[← Roadmap](12-roadmap.md) · [Index](README.md)
 
 A guide tells you the plug is 17 mm. Parts Finder tells you where to buy the filter,
 what it costs at five places, and how to get to the cheapest one. It closes the loop
@@ -116,7 +116,7 @@ Three real mechanisms, none of them automatic:
 All three need moderation and a trust weighting (a user with 40 confirmed reports counts
 more than a brand-new account), and all three need a privacy line: **contributions are
 aggregated and never expose an individual's location history.** Write that into the
-privacy policy alongside the vault commitments in [section 12](12-safety-and-ethics.md).
+privacy policy alongside the vault commitments in [section 11](11-safety-and-ethics.md).
 
 ## Tier gating
 
@@ -138,4 +138,4 @@ privacy policy alongside the vault commitments in [section 12](12-safety-and-eth
 - [ ] Moderation model for community price reports, and the trust weighting
 - [ ] Does SkyLink take affiliate revenue on parts? If so, it must be disclosed in the
       UI, and the ranking must stay honest — see the no-upselling line in
-      [section 12](12-safety-and-ethics.md)
+      [section 11](11-safety-and-ethics.md)

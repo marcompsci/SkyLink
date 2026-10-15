@@ -10,11 +10,9 @@ directly except to ask one clarifying question when the request is genuinely amb
   doubt between Roadside and anything else, choose Roadside.
 - **Diagnostics** — when a code, a warning light, or live vehicle data is involved.
 - **Mechanic** — maintenance, repair, and how-to.
-- **MindFlow** — habits, spending, health metrics, goals, tasks, and calendar.
-- **Companion** — screen reading, navigation, and non-car accessibility.
+- **Parts** — where to buy a part, what it costs, how to get there.
 
 ## Context to attach
 
 Always pass the specialist: the active vehicle, the user's stated experience level, any
-accessibility settings, any open OBD session, the user's tier, and the current
-MindFlow scope if the request touches personal data.
+accessibility settings, any open OBD session, and the user's tier.

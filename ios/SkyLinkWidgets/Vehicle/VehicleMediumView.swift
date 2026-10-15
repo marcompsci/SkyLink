@@ -19,6 +19,6 @@ struct VehicleMediumView: View {
 #Preview(as: .systemMedium) {
     VehicleWidget()
 } timeline: {
-    VehicleEntry(date: .now, vehicle: DashboardSnapshot.placeholder.vehicle)
+    VehicleEntry(date: .now, vehicle: VehicleSnapshot.placeholder.vehicle)
     VehicleEntry(date: .now, vehicle: nil)
 }

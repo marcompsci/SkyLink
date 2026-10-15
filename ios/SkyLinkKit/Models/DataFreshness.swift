@@ -2,8 +2,9 @@ import Foundation
 
 /// Where a value came from and how much to trust it.
 ///
-/// Spec: docs/14-mindflow.md — sample data is never presented as live
-/// information, and every connected panel states its source.
+/// Spec: docs/05-guides-and-diagrams.md and docs/13-parts-finder.md —
+/// sample data is never presented as live information, and every panel
+/// showing connected data states its source.
 enum DataFreshness: String, Codable, Hashable, Sendable {
     /// Fetched from an authorized API inside the freshness window.
     case live

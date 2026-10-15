@@ -2,13 +2,11 @@
 
 [← Product overview](01-product-overview.md) · [Index](README.md) · Next: [Navigation →](03-navigation.md)
 
-One spine, two heads. Everything below the Agent Orchestrator is shared by both
-products.
+One app, one agent layer, one backend.
 
 ```mermaid
 flowchart TD
-  A[SkyLink Auto<br/>iOS app] --> O[Agent Orchestrator]
-  B[SkyLink Companion<br/>iOS app] --> O
+  A[SkyLink<br/>iOS app] --> O[Agent Orchestrator]
   O --> V[VoiceIO<br/>STT / TTS / barge-in]
   O --> L[LLM Gateway<br/>model routing]
   O --> T[Tool Layer]
@@ -25,25 +23,20 @@ flowchart TD
 
 ```
 /SkyLink
- /Shared
+ /Core
   /VoiceIO              # speech in/out, wake word, barge-in
   /AgentEngine          # turn loop, tool calls, streaming
   /PrivacyManager       # permission gates, redaction, local-only flags
   /EntitlementKit       # tier, search meter, paywall triggers
   /DesignSystem         # tokens, components, dark mode, Dynamic Type
   /LoggingService
- /Auto
+ /Car
   /GarageStore          # vehicle profiles, VIN decode, service history
   /GuideRenderer        # step player, diagram canvas, hotspot overlay
   /DiagramKit           # SVG layer renderer, pan/zoom, part highlight
   /OBDService           # CoreBluetooth, ELM327, PID polling, DTC decode
   /RoadsideSOS          # triage flow, location, dispatch, offline cache
   /CategoryDrawer       # the hamburger tree
- /Companion
-  /ScreenCaptureService # ReplayKit / Broadcast Upload extension
-  /VisionInterpreter    # on-screen element + photo description
-  /OverlayGuidanceView
-  /ShortcutsBridge
  /App
   /Onboarding
   /Settings

@@ -1,6 +1,6 @@
 # Single-file spec
 
-[`SkyLink-Master-Spec-v0.1.md`](SkyLink-Master-Spec-v0.1.md) — every section of
+[`SkyLink-Master-Spec-v0.2.md`](SkyLink-Master-Spec-v0.2.md) — every section of
 [`/docs`](../docs/) concatenated into one file, for reading offline or feeding to an
 LLM.
 

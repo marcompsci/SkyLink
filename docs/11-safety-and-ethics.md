@@ -1,6 +1,6 @@
-# 12. Safety, Liability & Ethics
+# 11. Safety, Liability & Ethics
 
-[← Brand](11-brand.md) · [Index](README.md) · Next: [Roadmap →](13-roadmap.md)
+[← Brand](10-brand.md) · [Index](README.md) · Next: [Roadmap →](12-roadmap.md)
 
 > **Read this before writing agent or guide code.** An app that tells people how to work
 > on brakes carries real risk. This section is a build requirement, not boilerplate.
@@ -61,7 +61,6 @@ safety gates, and the dispatch partner agreements before launch.
   sold or shared with insurers, lenders, or advertisers. Write that commitment into the
   privacy policy — it is a real and valuable line to hold, and competitors will not hold
   it.
-- **Screen capture** in Companion is processed per turn and not retained.
 - **Photos** are processed and discarded unless attached to a saved service record.
 - **Conversations** are retained for the user's history and deleted on request.
 

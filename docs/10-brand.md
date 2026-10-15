@@ -1,6 +1,6 @@
-# 11. Brand System
+# 10. Brand System
 
-[← Pricing](10-pricing.md) · [Index](README.md) · Next: [Safety & ethics →](12-safety-and-ethics.md)
+[← Pricing](09-pricing.md) · [Index](README.md) · Next: [Safety & ethics →](11-safety-and-ethics.md)
 
 Machine-readable tokens: [`/design/tokens.json`](../design/tokens.json).
 
@@ -12,8 +12,7 @@ help.
 
 Mark: a single unbroken link form that also reads as a road curving to a horizon. Clean,
 geometric, legible at 20pt on a dashboard mount. Two lockups — mark alone for the app
-icon, mark plus wordmark for everything else. Sub-brands are the wordmark plus a
-lighter-weight "Auto" or "Companion."
+icon, mark plus wordmark for everything else. No sub-brands: there is one product.
 
 ## Palette
 

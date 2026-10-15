@@ -2,12 +2,12 @@ import WidgetKit
 
 struct VehicleProvider: TimelineProvider {
     func placeholder(in context: Context) -> VehicleEntry {
-        VehicleEntry(date: .now, vehicle: DashboardSnapshot.placeholder.vehicle)
+        VehicleEntry(date: .now, vehicle: VehicleSnapshot.placeholder.vehicle)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (VehicleEntry) -> Void) {
         let vehicle = context.isPreview
-            ? DashboardSnapshot.placeholder.vehicle
+            ? VehicleSnapshot.placeholder.vehicle
             : SharedStore.loadSnapshot()?.vehicle
 
         completion(VehicleEntry(date: .now, vehicle: vehicle))

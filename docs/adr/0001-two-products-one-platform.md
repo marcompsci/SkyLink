@@ -1,6 +1,6 @@
 # ADR 0001 — Two products, one platform
 
-**Status:** Accepted · **Date:** 2026-09-18
+**Status:** Superseded by [ADR 0004](0004-scope-cut-car-app-only.md) on 2026-10-14 · **Date:** 2026-09-18
 
 ## Context
 

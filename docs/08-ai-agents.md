@@ -1,8 +1,8 @@
 # 8. The AI Agents
 
-[← OBD-II](07-obd-ii.md) · [Index](README.md) · Next: [Companion →](09-companion.md)
+[← OBD-II](07-obd-ii.md) · [Index](README.md) · Next: [Pricing →](09-pricing.md)
 
-Five agents. One orchestrator routes; four specialists do the work.
+Four agents. One orchestrator routes; three specialists do the work.
 
 The full system prompts live in [`/agents`](../agents/) as individual files, ready to
 load. This page is the overview and the tool contract.
@@ -11,13 +11,13 @@ load. This page is the overview and the tool contract.
 flowchart TD
   U[User: voice, text,<br/>photo or scan] --> O[Orchestrator]
   O --> M[Mechanic Agent]
+  O --> P[Parts Agent]
   O --> R[Roadside Agent]
   O --> D[Diagnostics Agent]
-  O --> C[Companion Agent]
   M --> TL[Shared tool layer]
   R --> TL
   D --> TL
-  C --> TL
+  P --> TL
 ```
 
 ## Shared tool layer
@@ -43,7 +43,7 @@ flowchart TD
 | Mechanic (Sky) | [`agents/mechanic.md`](../agents/mechanic.md) | Maintenance, repair, how-to, guide walkthroughs |
 | Roadside | [`agents/roadside.md`](../agents/roadside.md) | Stranded users. Safety first, then triage, then dispatch |
 | Diagnostics | [`agents/diagnostics.md`](../agents/diagnostics.md) | Codes, freeze-frame, live data, urgency |
-| Companion (Halo) | [`agents/companion.md`](../agents/companion.md) | Screen reading, photo description, voice navigation |
+| Parts | [`agents/parts.md`](../agents/parts.md) | Cheapest nearby parts, stock, directions |
 
 Every agent inherits the [safety kernel](../agents/safety-kernel.md), which is
 non-overridable.
@@ -56,7 +56,8 @@ non-overridable.
 - Route to **Diagnostics** when a code, a warning light, or live vehicle data is
   involved.
 - Route to **Mechanic** for maintenance, repair, and how-to.
-- Route to **Companion** for screen reading, navigation, and non-car accessibility.
+
+- Route to **Parts** for "where do I buy it" and "what does it cost".
 
 Always attach the active vehicle, the user's stated experience level, any accessibility
 settings, and any open OBD session to the specialist's context.

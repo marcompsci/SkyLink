@@ -1,4 +1,4 @@
-# 3. SkyLink Auto — Navigation
+# 3. Navigation
 
 [← Architecture](02-architecture.md) · [Index](README.md) · Next: [Category tree →](04-category-tree.md)
 
@@ -47,7 +47,7 @@ level it is a step inside a guide, not a menu item.
 | Browse by Category | The full maintenance tree — [section 4](04-category-tree.md) |
 | Diagnose a Problem | Symptom-first entry: "it won't start", "it's making a noise", or scan with OBD-II |
 | Roadside SOS | Stranded flow — [section 6](06-roadside-sos.md) |
-| Find Parts | Cheapest parts nearby and directions — [section 15](15-parts-finder.md) |
+| Find Parts | Cheapest parts nearby and directions — [section 13](13-parts-finder.md) |
 | Saved & History | Bookmarked guides, past conversations, past scans |
 | Ask Sky | Full-screen chat/voice with the agent |
 | Plan & Settings | Tier, searches remaining, permissions, accessibility, units |

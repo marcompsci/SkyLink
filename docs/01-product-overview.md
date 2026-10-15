@@ -1,58 +1,72 @@
 # 1. Product Overview
 
-[← Index](README.md) · Next: [Architecture →](02-architecture.md)
+[Index](README.md) · Next: [Architecture →](02-architecture.md)
 
-SkyLink is one platform carrying two products on a shared spine.
+**SkyLink is a voice-first AI car assistant for iPhone — a mechanic in your pocket.**
 
-**SkyLink Auto** — a mechanic in your pocket. A voice-first AI that walks a complete
-beginner through car maintenance and roadside emergencies using labeled diagrams and
-numbered steps. It assumes the user has never opened a hood, and may be standing on a
-shoulder in the dark right now.
+It walks someone who has never opened a hood through car maintenance and roadside
+emergencies, using labeled diagrams and one short instruction at a time. It reads the
+car's own fault codes. It finds the part you need at the cheapest nearby store. And it
+refuses the jobs that are genuinely unsafe for an untrained person instead of walking
+them into one.
 
-**SkyLink Companion** — a screen-aware, voice-first accessibility assistant. Reads the
-screen aloud, describes photos like a friend would, navigates apps by voice, announces
-calls and texts with tone.
+That is the whole product. It is not a platform.
 
-## Why one platform
+## Who it's for
 
-Both products need the same three things: a hands-free voice loop, an AI agent that can
-see what the user sees, and a permission model the user trusts. Build that spine once.
-Two app surfaces, two stories to market, one account and one backend.
-
-The audiences also overlap more than they look. A blind driver's passenger still needs
-the dashboard light explained. A user with limited mobility stranded on a shoulder needs
-dispatch, not a jack. SkyLink Auto in voice mode is an accessibility product whether or
-not it is sold as one.
-
-## Who SkyLink Auto is for
+The wedge is **drivers whose income depends on the car running**: rideshare and
+delivery drivers, trades, anyone for whom a day in the shop is a day unpaid. They are
+cost-obsessed by necessity, they measure downtime in lost wages, and they talk to each
+other constantly.
 
 | Segment | What they need | Likely tier |
 | --- | --- | --- |
+| **Rideshare / delivery driver** (wedge) | Uptime. Fast triage, cheap fixes, no shop downtime | Garage |
 | Knows nothing about cars | Plain language, diagrams, "is this safe for me to do?" | Free → Garage |
 | Weekend DIYer | Torque specs, job sequence, part numbers | Garage |
-| Rideshare / delivery driver | Uptime — fast triage, cheap fixes, no shop downtime | Garage |
-| Independent shop or fleet | Multi-vehicle records, unlimited diagnostics, no ceiling | Industry |
+| Small fleet / independent shop | Multi-vehicle records, unlimited diagnostics | Industry |
+
+"Everyone with a car" is not a market. Start with the people who lose money when the
+car stops.
 
 ## The core bet
 
-Every answer a beginner needs about their car already exists online. It is scattered
-across forums, PDFs, and 14-minute videos where the useful part starts at 9:20. The
-problem is not information, it is interface. SkyLink collapses "what is that noise and
-am I in danger" into one spoken question and one correct, illustrated answer.
+Every answer a beginner needs already exists online, scattered across forums, PDFs, and
+14-minute videos where the useful part starts at 9:20. The problem is not information,
+it is interface.
+
+But the sharper version of the bet, and the one worth testing first: **most people don't
+want to become mechanics — they want to stop being overcharged.** "Is $600 fair for
+this?" and "can I drive it home?" are asked far more often than "how do I replace it."
+Decision support may be the product and instruction the supporting act. Section 12 says
+how to find out.
 
 ## What makes it different
 
-- **Voice-first, not voice bolted on.** Hands dirty, hands on a lug wrench, or eyes that
-  cannot read the screen. The whole flow works spoken.
-- **Diagrams are the product.** Text steps are useless to someone who does not know what
-  a serpentine belt looks like. Every step that names a part shows that part, highlighted.
+- **Voice-first, not voice bolted on.** Hands dirty, or on a lug wrench, or eyes that
+  can't read the screen. The whole flow works spoken.
+- **Diagrams are the product.** Text steps are useless to someone who doesn't know what
+  a serpentine belt looks like. Every step that names a part shows that part,
+  highlighted.
 - **It reads the car, not just the driver.** OBD-II codes arrive as structured data, so
-  the agent diagnoses from the car's own signal instead of "it's making a weird sound."
-- **It knows when to stop.** The agent refuses jobs that are unsafe for an untrained
-  person and routes to a professional. That refusal is what makes the rest trustworthy.
+  the agent diagnoses from the car's own signal.
+- **It knows when to stop.** The refusals in [section 11](11-safety-and-ethics.md) are
+  what make the rest trustworthy.
+- **Roadside SOS is free forever, offline, and never metered.** Nothing else in the
+  category does this.
 
 ## Naming
 
-- Platform: **SkyLink** · shared account: **SkyLink ID**
-- Auto product: **SkyLink Auto**, agent persona **Sky**
-- Accessibility product: **SkyLink Companion**, agent persona **Halo**
+- App: **SkyLink** · agent persona: **Sky** · account: **SkyLink ID**
+
+## What SkyLink is not
+
+Two things were specified here and have been cut — see
+[ADR 0004](adr/0004-scope-cut-car-app-only.md):
+
+- **No personal tracking.** Habits, spending, goals, and calendar belong to Cadence.
+- **No general screen-reading assistant.** That is Echo.
+
+Accessibility stays, but as *how this app is operated* — full VoiceOver support, voice
+control of every screen, and a written long-description on every diagram — not as a
+second product.

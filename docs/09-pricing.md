@@ -1,6 +1,6 @@
-# 10. Pricing & Entitlements
+# 9. Pricing & Entitlements
 
-[← Companion](09-companion.md) · [Index](README.md) · Next: [Brand →](11-brand.md)
+[← AI agents](08-ai-agents.md) · [Index](README.md) · Next: [Brand →](10-brand.md)
 
 Three tiers. Prices below are a recommendation, not a decision.
 

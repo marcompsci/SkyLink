@@ -11,14 +11,13 @@ is the point of building it.
 ```
 ios/
 ├── SkyLinkKit/          shared between app and widget extension
-│   ├── Models/          Habit, VehicleStatus, DashboardSnapshot, DataFreshness
+│   ├── Models/          VehicleStatus, VehicleSnapshot, DataFreshness, DiagnosticSeverity
 │   ├── Store/           App Group container read/write
 │   └── Design/          colour tokens from /design/tokens.json
 └── SkyLinkWidgets/      the widget extension
-    ├── Habits/          small · large (interactive) · circular · rectangular
-    ├── Vehicle/         medium · rectangular, with SOS deep link
-    ├── Intents/         App Intents for widget taps and Siri
-    └── Shared/          freshness stamp, vault placeholder, empty state
+    ├── Vehicle/         medium · Lock Screen rectangular, with SOS deep link
+    ├── Intents/         Siri entry point for roadside help
+    └── Shared/          freshness stamp, empty state
 ```
 
 ## Setup in Xcode
@@ -55,7 +54,7 @@ The widget extension never touches the network and holds no vault key. The
 app decides what is safe to show and writes it:
 
 ```swift
-SharedStore.save(snapshot)   // also reloads all timelines
+SharedStore.save(VehicleSnapshot(vehicle: status, updatedAt: .now))
 ```
 
 Call it after any change the widgets should reflect. The 15- and 30-minute
@@ -70,17 +69,15 @@ These come from the spec and are deliberate, not incidental:
   views badge it as such.
 - **Every value carries its provenance.** `FreshnessStampView` is required
   on connected data, and unmissable on demo data.
-- **The vault stays locked.** Private habits render as
-  `VaultLockedRowView`, not a blurred number. The widget has no key.
-- **Lock Screen shows no balances**, transactions, or health values.
-- **Interactive widgets run only low-risk intents.** Ticking a habit runs
-  inline; anything on the explicit-approval list opens the app.
+- **Siri is an entry point, not a bypass.** `OpenRoadsideIntent` opens the
+  app, because the safety script and location capture belong in the full flow.
 - **No tier check in the SOS path.** See
   [ADR 0002](../docs/adr/0002-sos-is-never-metered.md).
 
 ## What's missing
 
-- The app target itself — this is the widget slice only
+- The app target itself — this is the widget slice only. It is M0 in
+  [the roadmap](../docs/12-roadmap.md) and the next thing to build.
 - Live Activities / Dynamic Island (needs ActivityKit and a running activity)
 - Any real data source; `SharedStore` is the seam where that plugs in
 - Tests

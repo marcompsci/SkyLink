@@ -2,13 +2,13 @@
 
 # SkyLink
 
-**A mechanic in your pocket, and a companion on your screen.**
+**A mechanic in your pocket.**
 
-An iOS platform carrying two products on one shared spine: a voice-first AI that walks
-complete beginners through car maintenance and roadside emergencies with labeled
-diagrams, and a screen-aware accessibility assistant.
+A voice-first AI car assistant for iPhone. It walks complete beginners through car
+maintenance and roadside emergencies with labeled diagrams, reads the car's own fault
+codes, and refuses the jobs that are genuinely unsafe for an untrained person.
 
-`Status: specification — v0.1` · `Platform: iOS` · `No code yet`
+`Status: specification + widget slice — v0.1` · `Platform: iOS` · `No code yet`
 
 </div>
 
@@ -22,17 +22,13 @@ built, and where to start. Code lands here as the MVP is built.
 
 If you are reading this to decide whether to help: start with
 [docs/01-product-overview.md](docs/01-product-overview.md), then
-[docs/13-roadmap.md](docs/13-roadmap.md). Fifteen minutes gets you the whole picture.
+[docs/11-roadmap.md](docs/11-roadmap.md). Fifteen minutes gets you the whole picture.
 
-## The two products
+## Who it's for
 
-| Product | What it does | Persona |
-| --- | --- | --- |
-| **SkyLink Auto** | Voice-first AI mechanic. Maintenance guides with labeled diagrams, OBD-II diagnostics, roadside SOS. Built for someone who has never opened a hood. | Sky |
-| **SkyLink Companion** | Screen-aware accessibility assistant. Reads the screen aloud, describes photos like a friend, navigates apps by voice. | Halo |
-
-They share one account, one backend, one voice stack, and one permission model.
-SkyLink Auto ships first.
+Drivers whose income depends on the car running — rideshare and delivery drivers,
+trades, anyone for whom a day in the shop is a day unpaid. Then everyone else who has
+never opened a hood.
 
 ## The core bet
 
@@ -56,11 +52,10 @@ SkyLink/
 │   ├── 06-roadside-sos.md
 │   ├── 07-obd-ii.md
 │   ├── 08-ai-agents.md
-│   ├── 09-companion.md
-│   ├── 10-pricing.md
-│   ├── 11-brand.md
-│   ├── 12-safety-and-ethics.md
-│   ├── 13-roadmap.md
+│   ├── 09-pricing.md
+│   ├── 10-brand.md
+│   ├── 11-safety-and-ethics.md
+│   ├── 12-roadmap.md
 │   └── adr/                architecture decision records
 ├── spec/                   the whole spec as one file, for reading or feeding to an LLM
 ├── agents/                 agent system prompts, one per file, ready to load
@@ -74,8 +69,8 @@ SkyLink/
 
 1. **[Product overview](docs/01-product-overview.md)** — what it is and who it is for.
 2. **[Architecture](docs/02-architecture.md)** — system diagram, iOS module layout, backend split, database schema.
-3. **[Roadmap](docs/13-roadmap.md)** — the MVP cut and what to build first.
-4. **[Safety & ethics](docs/12-safety-and-ethics.md)** — read before writing a single line of agent or guide code. It is a build requirement, not boilerplate.
+3. **[Roadmap](docs/11-roadmap.md)** — the MVP cut and what to build first.
+4. **[Safety & ethics](docs/10-safety-and-ethics.md)** — read before writing a single line of agent or guide code. It is a build requirement, not boilerplate.
 
 ## Non-negotiables
 
@@ -87,7 +82,7 @@ These are decided. Please do not quietly change them in a PR.
   interval.** Cited source or an honest "I don't have that."
 - **The agent refuses to walk untrained users through the hard-stop list** (airbags,
   high-voltage EV, fuel under pressure, brake hydraulics, spring compression, lifting
-  without stands). See [docs/12](docs/12-safety-and-ethics.md).
+  without stands). See [docs/11](docs/10-safety-and-ethics.md).
 - **Every step that names a part shows that part, highlighted.** Text-only steps are
   useless to a beginner.
 - **Severity is never communicated by color alone.** Icon and word, always.
@@ -117,4 +112,4 @@ keep the spec and the code in sync, and read the safety section first.
 ## Status of this spec
 
 `v0.1` — first complete draft. Open questions are tracked at the end of
-[docs/13-roadmap.md](docs/13-roadmap.md).
+[docs/11-roadmap.md](docs/11-roadmap.md).
