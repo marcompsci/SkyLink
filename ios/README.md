@@ -1,7 +1,8 @@
 # SkyLink — iOS
 
-Swift sources for the widget extension and the small shared layer it
-depends on. **Not yet compiled.** These files were written against the
+Swift sources for the app, the widget extension, and the layer they share.
+**Not yet compiled** — but as of M0 there is a real app target, and
+[`BUILD.md`](BUILD.md) generates the Xcode project in one command. These files were written against the
 spec in [`/docs`](../docs/) and Apple's current APIs, but nothing here has
 been through a build. Expect to fix a few things on first compile — that
 is the point of building it.

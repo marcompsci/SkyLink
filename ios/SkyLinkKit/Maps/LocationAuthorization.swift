@@ -1,4 +1,5 @@
 import CoreLocation
+import Observation
 
 /// SkyLink asks for **While Using the App**, never Always.
 ///
@@ -9,11 +10,12 @@ import CoreLocation
 /// The only defensible case for Always is automatic breakdown detection for
 /// SOS, which would be a separate feature with its own explanation screen.
 @MainActor
-final class LocationAuthorization: NSObject, ObservableObject {
-    @Published private(set) var status: CLAuthorizationStatus
-    @Published private(set) var lastFix: CLLocation?
+@Observable
+final class LocationAuthorization: NSObject {
+    private(set) var status: CLAuthorizationStatus
+    private(set) var lastFix: CLLocation?
 
-    private let manager = CLLocationManager()
+    @ObservationIgnored private let manager = CLLocationManager()
 
     override init() {
         status = manager.authorizationStatus
@@ -29,7 +31,7 @@ final class LocationAuthorization: NSObject, ObservableObject {
     }
 
     func requestOneFix() {
-        guard status == .authorizedWhenInUse || status == .authorizedAlways else { return }
+        guard canUseLiveLocation else { return }
         manager.requestLocation()
     }
 
@@ -41,15 +43,17 @@ final class LocationAuthorization: NSObject, ObservableObject {
 }
 
 extension LocationAuthorization: CLLocationManagerDelegate {
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        status = manager.authorizationStatus
+    nonisolated func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        let new = manager.authorizationStatus
+        Task { @MainActor in self.status = new }
     }
 
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        lastFix = locations.last
+    nonisolated func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let last = locations.last
+        Task { @MainActor in self.lastFix = last }
     }
 
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    nonisolated func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         // Silent: the ZIP-code path covers this.
     }
 }

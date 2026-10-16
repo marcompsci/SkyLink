@@ -7,7 +7,7 @@ struct VehicleWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: Self.kind, provider: VehicleProvider()) { entry in
             VehicleWidgetView(entry: entry)
-                .containerBackground(SkyLinkPalette.midnight, for: .widget)
+                .containerBackground(SkyLinkPalette.garageBlack, for: .widget)
         }
         .configurationDisplayName("Your car")
         .description("Service due, active fault codes, and one tap to roadside help.")

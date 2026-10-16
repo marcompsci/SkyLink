@@ -8,7 +8,7 @@ struct VehicleSummaryView: View {
             Text("SkyLink Auto")
                 .font(.system(size: 10, weight: .bold))
                 .textCase(.uppercase)
-                .foregroundStyle(SkyLinkPalette.signalTeal)
+                .foregroundStyle(SkyLinkPalette.torqueOrange)
 
             Text(vehicle.nickname)
                 .font(.system(size: 15, weight: .semibold))

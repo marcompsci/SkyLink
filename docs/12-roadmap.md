@@ -2,9 +2,9 @@
 
 [← Safety & ethics](11-safety-and-ethics.md) · [Index](README.md) · Next: [Parts Finder →](13-parts-finder.md)
 
-**Status: 0% shipped.** The spec is written, the design is drawn, and a widget slice
-exists in Swift. Nothing has compiled, nothing is installed on a phone, and no one
-outside this repo has used it. Progress is measured from here in *people who used it*,
+**Status: M0 written, not yet compiled.** The app target exists, the shell runs the
+Garage, the drawer and the SOS flow, and `xcodegen generate` builds the project in one
+command. Nothing has been through a compiler and nobody outside this repo has used it. Progress is measured from here in *people who used it*,
 not in features specified.
 
 ## What "done" means
@@ -21,14 +21,20 @@ and come back.** Not when the category tree is full.
 | **M4 — It's trusted** | A licensed mechanic has reviewed and signed the content |
 | **M5 — 1.0** | App Store, Free + Garage tiers, 25 guides |
 
-## M0 — It runs (this week)
+## M0 — It runs
 
-- [ ] Xcode project, iOS 17 target, App Group wired on both targets
-- [ ] Widget extension renders `VehicleWidget` on device
-- [ ] App shell: home, drawer, one guide screen, SOS entry
-- [ ] `skylink://sos` deep link opens triage
+- [x] Xcode project via `xcodegen generate`, iOS 17 target, App Group on both targets
+- [x] App shell: Garage home, category drawer, SOS flow, service log
+- [x] `skylink://sos` deep link routing — SOS replaces the stack, nothing sits between
+      a stranded user and triage
+- [x] Auto on screen, blinking, in the Ask bar
+- [ ] **Compiles and runs on a device** — the only box that counts
 
-Nothing else. No networking, no agent, no OBD.
+Everything above is written and unverified. Expect a handful of fixes on first build;
+that is the point of building it. See [`ios/BUILD.md`](../ios/BUILD.md).
+
+No networking, no agent, no OBD, no onboarding. Guides and Ask Auto show an honest
+"Not built yet" screen rather than a fake one.
 
 ## M1 — It answers (2 weeks)
 
