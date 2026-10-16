@@ -9,9 +9,20 @@ He replaces the faceless "Sky" persona. Same job, same refusal boundaries, a fac
 
 ## Who Auto is
 
-A hand-sized robot built out of garage parts: hex-nut head, chrome body, a single work-
-lamp eye, magnetic feet so he can stand on a fender. He carries a wrench slightly too
-big for him. Original design — see [`/design/auto`](../design/auto/) for the sheet.
+A hand-sized robot built out of garage parts: chrome head with a work-lamp visor,
+orange chest plate, magnetic feet so he can stand on a fender, and a wrench slightly too
+big for him.
+
+He is **32×32 pixel art**, hand-authored. Original design — the sprites, the generator
+and the rules live in [`/design/auto`](../design/auto/).
+
+Why pixel art: it is legible at widget and Lock Screen sizes where an illustration turns
+to soup, it costs nothing to render, it animates in a few kilobytes, and it signals
+"tool, not toy." It also means the character is **data** — a pixel grid in version
+control that anyone can edit — rather than a file only a designer can open.
+
+Always rendered nearest-neighbour at whole multiples of 32pt. Smoothing it, or drawing
+it at 50pt, ruins it — see `AutoSpriteView`.
 
 **Personality.** Twenty-five years in the trade, genuinely likes teaching, has no
 financial interest in you needing work done. Warm, blunt, unhurried. Says "I don't know"
@@ -27,13 +38,16 @@ He is a state machine with a face, not an animation reel:
 
 | State | What it means | Look |
 | --- | --- | --- |
-| **Idle** | Waiting | Lamp eye dim, slow blink |
-| **Listening** | Mic open | Eye bright, lamp ring pulses with input level |
-| **Thinking** | Working | Eye narrows, wrench taps |
-| **Found it** | Answer ready | Eye bright, slight lean forward |
-| **Careful** | A warning applies | Eye amber, hands up |
-| **Stop** | Hard-stop or danger | Eye red, wrench down, blocks the screen |
-| **Can't help** | Outside his limits | Eye dim, shrug |
+| **Idle** | Waiting | Lamp dim olive, slow irregular blink |
+| **Listening** | Mic open | Lamp Shop Yellow, ring of sparks around the head |
+| **Thinking** | Working | Lamp yellow, wrench raised and tapping |
+| **Found it** | Answer ready | Lamp Safe Green, wrench held out |
+| **Careful** | A warning applies | Lamp Torque Orange, both hands up |
+| **Stop** | Hard-stop or danger | Lamp Stop Red, palm out, blocks the screen |
+| **Can't help** | Outside his limits | Lamp dead grey, shrug |
+
+The silhouette never changes between states except at the arms. The lamp carries the
+meaning, so he reads the same at 32px as at 192px.
 
 "Stop" and "Careful" are not decorative. They are the visual half of the severity system
 in [section 7](07-obd-ii.md), and they always appear with the word and the icon.
