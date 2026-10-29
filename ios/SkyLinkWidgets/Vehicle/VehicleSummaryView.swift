@@ -6,18 +6,18 @@ struct VehicleSummaryView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text("SkyLink Auto")
-                .font(.system(size: 10, weight: .bold))
+                .font(.system(.caption2, weight: .bold))
                 .textCase(.uppercase)
                 .foregroundStyle(SkyLinkPalette.torqueOrange)
 
             Text(vehicle.nickname)
-                .font(.system(size: 15, weight: .semibold))
+                .font(.system(.subheadline, weight: .semibold))
                 .foregroundStyle(.white)
 
             if let severity = vehicle.severity, let code = vehicle.activeCode {
                 Label {
                     Text("\(code) · \(severity.label)")
-                        .font(.system(size: 12, weight: .medium))
+                        .font(.system(.caption, weight: .medium))
                         .foregroundStyle(severity.tint)
                 } icon: {
                     Image(systemName: severity.symbolName)
@@ -28,7 +28,7 @@ struct VehicleSummaryView: View {
 
             if let miles = vehicle.milesToNextService {
                 Text("Oil change due in ^[\(miles) mile](inflect: true)")
-                    .font(.system(size: 12))
+                    .font(.system(.caption))
                     .foregroundStyle(.white.opacity(0.7))
             }
 

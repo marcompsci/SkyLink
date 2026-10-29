@@ -12,7 +12,7 @@ struct FreshnessStampView: View {
                 .frame(width: 5, height: 5)
 
             Text(freshness.label)
-                .font(.system(size: 9, weight: .semibold, design: .monospaced))
+                .font(.system(.caption2, design: .monospaced, weight: .semibold))
                 .textCase(.uppercase)
                 .foregroundStyle(freshness == .demo ? freshness.tint : .secondary)
         }

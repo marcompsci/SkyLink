@@ -11,16 +11,16 @@ struct ReminderRowView: View {
     var body: some View {
         HStack(alignment: .top, spacing: 9) {
             Image(systemName: severity.symbolName)
-                .font(.system(size: 15))
+                .font(.system(.subheadline))
                 .foregroundStyle(severity.tint)
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(reminder.title)
-                    .font(.system(size: 14, weight: .semibold))
+                    .font(.system(.footnote, weight: .semibold))
                     .foregroundStyle(severity == .safe ? SkyLinkPalette.chrome : severity.tint)
 
                 Text(reminder.summary(currentMileage: mileage))
-                    .font(.system(size: 12.5))
+                    .font(.system(.caption))
                     .foregroundStyle(SkyLinkPalette.grease)
             }
 

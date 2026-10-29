@@ -7,18 +7,18 @@ struct VehicleCardView: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 14) {
                 Image(systemName: "car.side.fill")
-                    .font(.system(size: 26))
+                    .font(.system(.title2))
                     .foregroundStyle(SkyLinkPalette.grease)
                     .frame(width: 58, height: 58)
                     .background(SkyLinkPalette.garageBlack, in: .rect(cornerRadius: 15))
 
                 VStack(alignment: .leading, spacing: 3) {
                     Text(garage.vehicle?.nickname ?? "Add your car")
-                        .font(.system(size: 18, weight: .bold))
+                        .font(.system(.body, weight: .bold))
                         .foregroundStyle(SkyLinkPalette.chrome)
 
                     Text("\(garage.currentMileage.formatted()) mi")
-                        .font(.system(size: 13, design: .monospaced))
+                        .font(.system(.footnote, design: .monospaced))
                         .foregroundStyle(SkyLinkPalette.grease)
                 }
 

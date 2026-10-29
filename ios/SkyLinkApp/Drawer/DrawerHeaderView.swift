@@ -8,17 +8,17 @@ struct DrawerHeaderView: View {
             HStack(spacing: 10) {
                 AutoSpriteView(state: .idle, size: 32)
                 Text("SkyLink")
-                    .font(.system(size: 19, weight: .bold))
+                    .font(.system(.body, weight: .bold))
                     .foregroundStyle(SkyLinkPalette.chrome)
             }
 
             HStack(spacing: 10) {
                 Image(systemName: "car.side.fill")
-                    .font(.system(size: 14))
+                    .font(.system(.footnote))
                     .foregroundStyle(SkyLinkPalette.oilTeal)
 
                 Text(garage.vehicle?.nickname ?? "No car yet")
-                    .font(.system(size: 13.5, weight: .semibold))
+                    .font(.system(.footnote, weight: .semibold))
                     .foregroundStyle(SkyLinkPalette.chrome)
 
                 Spacer(minLength: 0)

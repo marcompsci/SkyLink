@@ -3,6 +3,7 @@ import SwiftUI
 struct GarageView: View {
     @Environment(GarageStore.self) private var garage
     @Environment(AppRouter.self) private var router
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -18,6 +19,7 @@ struct GarageView: View {
                 .padding(.horizontal, 20)
                 .padding(.top, 8)
             }
+            .scrollIndicators(.hidden)
 
             HazardStripe().ignoresSafeArea(edges: .top)
         }
@@ -29,24 +31,38 @@ struct GarageView: View {
                 Button("Menu", systemImage: "line.3.horizontal", action: openDrawer)
                     .labelStyle(.iconOnly)
                     .tint(SkyLinkPalette.chrome)
+                    .buttonStyle(.control)
             }
             ToolbarItem(placement: .principal) {
-                Text("THE GARAGE")
-                    .font(.system(size: 11, weight: .bold))
-                    .kerning(2)
-                    .foregroundStyle(SkyLinkPalette.grease)
+                Text("The Garage").skyLabel(SkyLinkPalette.grease)
             }
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Roadside help", systemImage: "exclamationmark.triangle.fill", action: openSOS)
                     .labelStyle(.iconOnly)
                     .tint(SkyLinkPalette.stopRed)
+                    .buttonStyle(.control)
             }
         }
-        .toolbarBackground(SkyLinkPalette.garageBlack, for: .navigationBar)
+        // Translucent chrome with content passing under it, rather than an
+        // opaque bar sitting on top.
+        .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
+        // Swipe in from the left edge, the same direction the drawer travels.
+        .gesture(edgeSwipe)
+    }
+
+    private var edgeSwipe: some Gesture {
+        DragGesture(minimumDistance: 12)
+            .onEnded { value in
+                guard value.startLocation.x < 24,
+                      value.predictedEndTranslation.width > 80 else { return }
+                openDrawer()
+            }
     }
 
     private func openDrawer() {
-        router.isDrawerOpen = true
+        withAnimation(SkyMotion.respecting(reduceMotion, SkyMotion.drawer)) {
+            router.isDrawerOpen = true
+        }
     }
 
     private func openSOS() {

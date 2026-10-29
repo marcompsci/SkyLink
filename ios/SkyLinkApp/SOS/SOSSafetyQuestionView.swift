@@ -6,7 +6,7 @@ struct SOSSafetyQuestionView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Are you somewhere safe now?")
-                .font(.system(size: 18, weight: .bold))
+                .font(.system(.body, weight: .bold))
                 .foregroundStyle(SOSPalette.text)
 
             HStack(spacing: 10) {

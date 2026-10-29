@@ -11,11 +11,11 @@ struct HealthTileView: View {
                 .frame(width: 9, height: 9)
 
             Text(title)
-                .font(.system(size: 12, weight: .semibold))
+                .font(.system(.caption, weight: .semibold))
                 .foregroundStyle(SkyLinkPalette.chrome)
 
             Text(severity.label)
-                .font(.system(size: 9))
+                .font(.system(.caption2))
                 .foregroundStyle(SkyLinkPalette.grease)
                 .lineLimit(1)
                 .minimumScaleFactor(0.8)

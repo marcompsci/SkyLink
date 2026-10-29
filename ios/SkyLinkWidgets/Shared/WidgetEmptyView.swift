@@ -10,11 +10,11 @@ struct WidgetEmptyView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             Image(systemName: "square.dashed")
-                .font(.system(size: 18))
+                .font(.system(.body))
                 .foregroundStyle(.white.opacity(0.6))
 
             Text(message)
-                .font(.system(size: 12, weight: .medium))
+                .font(.system(.caption, weight: .medium))
                 .foregroundStyle(.white.opacity(0.75))
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)

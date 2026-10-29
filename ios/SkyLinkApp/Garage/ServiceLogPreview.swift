@@ -7,15 +7,12 @@ struct ServiceLogPreview: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 11) {
             HStack(alignment: .firstTextBaseline) {
-                Text("SERVICE LOG")
-                    .font(.system(size: 11, weight: .bold))
-                    .kerning(1.8)
-                    .foregroundStyle(SkyLinkPalette.grease)
+                Text("Service log").skyLabel(SkyLinkPalette.grease)
 
                 Spacer()
 
                 Text(spentThisYear)
-                    .font(.system(size: 12, weight: .bold, design: .monospaced))
+                    .font(SkyType.mono)
                     .foregroundStyle(SkyLinkPalette.oilTeal)
             }
 
@@ -24,8 +21,9 @@ struct ServiceLogPreview: View {
             }
 
             Button("See all", action: openLog)
-                .font(.system(size: 13, weight: .semibold))
+                .font(SkyType.callout)
                 .tint(SkyLinkPalette.grease)
+                .buttonStyle(.control)
         }
     }
 

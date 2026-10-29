@@ -5,7 +5,7 @@ import SwiftUI
 struct SampleDataBadge: View {
     var body: some View {
         Text("SAMPLE")
-            .font(.system(size: 9, weight: .bold, design: .monospaced))
+            .font(.system(.caption2, design: .monospaced, weight: .bold))
             .kerning(1)
             .foregroundStyle(SkyLinkPalette.garageBlack)
             .padding(.horizontal, 7)

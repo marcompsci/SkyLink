@@ -14,24 +14,24 @@ struct DrawerCategoryRow: View {
         } label: {
             HStack(spacing: 13) {
                 Image(systemName: category.symbolName)
-                    .font(.system(size: 16))
+                    .font(.system(.callout))
                     .foregroundStyle(isEmergency ? SkyLinkPalette.stopRed : SkyLinkPalette.grease)
                     .frame(width: 22)
 
                 Text(category.title)
-                    .font(.system(size: 15))
+                    .font(SkyType.body)
                     .foregroundStyle(SkyLinkPalette.chrome)
 
                 Spacer(minLength: 4)
 
                 Text("\(category.jobCount)")
-                    .font(.system(size: 12, design: .monospaced))
+                    .font(SkyType.mono)
                     .foregroundStyle(SkyLinkPalette.grease)
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 13)
             .contentShape(.rect)
         }
-        .buttonStyle(.plain)
+        .buttonStyle(.card)
     }
 }

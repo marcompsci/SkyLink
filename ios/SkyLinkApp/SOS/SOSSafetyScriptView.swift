@@ -4,17 +4,15 @@ import SwiftUI
 struct SOSSafetyScriptView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 11) {
-            Text("FIRST — GET SAFE")
-                .font(.system(size: 11, weight: .bold))
-                .kerning(1.6)
-                .foregroundStyle(SkyLinkPalette.chrome.opacity(0.85))
+            Text("First — get safe").skyLabel(SkyLinkPalette.chrome.opacity(0.9))
 
             Text("Hazard lights on. Get off the road if the car still moves.")
-                .font(.system(size: 22, weight: .bold))
+                .font(.system(.title2, weight: .bold))
+                .tracking(-0.4)
                 .foregroundStyle(.white)
 
             Text("Then get out on the **passenger side** and stand behind the guardrail. Never between your car and traffic.")
-                .font(.system(size: 15))
+                .font(SkyType.callout)
                 .foregroundStyle(.white.opacity(0.92))
         }
         .frame(maxWidth: .infinity, alignment: .leading)

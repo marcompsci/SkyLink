@@ -8,20 +8,22 @@ struct DrawerFooterView: View {
             Button("Saved & History", systemImage: "bookmark.fill") {
                 router.show(.serviceLog)
             }
+            .buttonStyle(.control)
 
             Label("Plan & Settings", systemImage: "gearshape.fill")
                 .foregroundStyle(SkyLinkPalette.grease)
         }
-        .font(.system(size: 14, weight: .medium))
+        .font(SkyType.callout)
         .tint(SkyLinkPalette.chrome)
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal, 20)
         .padding(.top, 16)
         .padding(.bottom, 44)
+        // A fade, not a rule: the list continues underneath rather than
+        // stopping at a line.
         .overlay(alignment: .top) {
-            Rectangle()
-                .fill(SkyLinkPalette.garageBlack)
-                .frame(height: 1)
+            ScrollEdgeFade(edge: .top, height: 16)
+                .offset(y: -16)
         }
     }
 }

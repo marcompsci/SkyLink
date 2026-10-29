@@ -1,5 +1,10 @@
 import SwiftUI
 
+/// The two answers to "are you somewhere safe now?".
+///
+/// Press feedback is deliberately fast and un-bouncy here. Everywhere else a
+/// little life is good; on this screen the person is frightened and the
+/// controls should feel certain.
 struct SOSButtonStyle: ButtonStyle {
     enum Kind {
         case affirm
@@ -10,7 +15,7 @@ struct SOSButtonStyle: ButtonStyle {
 
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(.system(size: 16, weight: .bold))
+            .font(.system(.callout, weight: .bold))
             .foregroundStyle(foreground)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 17)
@@ -21,7 +26,10 @@ struct SOSButtonStyle: ButtonStyle {
                         .stroke(SOSPalette.border, lineWidth: 1.5)
                 }
             }
-            .opacity(configuration.isPressed ? 0.82 : 1)
+            .scaleEffect(configuration.isPressed ? 0.97 : 1)
+            .opacity(configuration.isPressed ? 0.9 : 1)
+            .animation(SkyMotion.press, value: configuration.isPressed)
+            .sensoryFeedback(.impact(weight: .medium), trigger: configuration.isPressed) { _, p in p }
     }
 
     private var foreground: Color {

@@ -10,33 +10,33 @@ struct SOSLocationCardView: View {
         VStack(alignment: .leading, spacing: 9) {
             HStack(spacing: 9) {
                 Image(systemName: "location.fill")
-                    .font(.system(size: 13))
+                    .font(.system(.footnote))
                     .foregroundStyle(SkyLinkPalette.oilTeal)
 
                 Text("LOCATION")
-                    .font(.system(size: 11, weight: .bold))
+                    .font(.system(.caption, weight: .bold))
                     .kerning(1.2)
                     .foregroundStyle(SkyLinkPalette.oilTeal)
 
                 Spacer()
 
                 Text(location.canUseLiveLocation ? "Saved offline" : "Not shared")
-                    .font(.system(size: 11))
+                    .font(.system(.caption))
                     .foregroundStyle(SOSPalette.dim)
             }
 
             if location.canUseLiveLocation, let fix = location.lastFix {
                 Text(coordinateText(for: fix.coordinate))
-                    .font(.system(size: 15, weight: .semibold, design: .monospaced))
+                    .font(.system(.subheadline, design: .monospaced, weight: .semibold))
                     .foregroundStyle(SOSPalette.text)
             } else {
                 Button("Share my location", systemImage: "location", action: location.requestWhenInUse)
-                    .font(.system(size: 14, weight: .semibold))
+                    .font(.system(.footnote, weight: .semibold))
                     .tint(SkyLinkPalette.oilTeal)
             }
 
             Text("Auto never tracks you in the background. This is asked for now because you need it now.")
-                .font(.system(size: 11.5))
+                .font(.system(.caption))
                 .foregroundStyle(SOSPalette.dim)
         }
         .frame(maxWidth: .infinity, alignment: .leading)

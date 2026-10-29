@@ -11,11 +11,11 @@ struct NotBuiltYetView: View {
             AutoSpriteView(state: .cantHelp, size: 96)
 
             Text("Not built yet")
-                .font(.system(size: 20, weight: .bold))
+                .font(.system(.title3, weight: .bold))
                 .foregroundStyle(SkyLinkPalette.chrome)
 
             Text("This is the M0 shell. Guides and Ask Auto come next.")
-                .font(.system(size: 14))
+                .font(.system(.footnote))
                 .foregroundStyle(SkyLinkPalette.grease)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 40)

@@ -11,10 +11,10 @@ struct VehicleSOSButtonView: View {
         Link(destination: URL(string: "skylink://sos")!) {
             VStack(spacing: 6) {
                 Image(systemName: "exclamationmark.triangle.fill")
-                    .font(.system(size: 22, weight: .semibold))
+                    .font(.system(.title3, weight: .semibold))
 
                 Text("SOS")
-                    .font(.system(size: 12, weight: .heavy))
+                    .font(.system(.caption, weight: .heavy))
             }
             .foregroundStyle(.white)
             .frame(width: 74)

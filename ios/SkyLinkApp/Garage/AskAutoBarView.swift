@@ -11,11 +11,11 @@ struct AskAutoBarView: View {
 
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Ask Auto")
-                        .font(.system(size: 15, weight: .bold))
+                        .font(SkyType.heading)
                         .foregroundStyle(SkyLinkPalette.chrome)
 
                     Text("\"What's that noise when I brake?\"")
-                        .font(.system(size: 12.5))
+                        .font(SkyType.caption)
                         .foregroundStyle(SkyLinkPalette.grease)
                         .lineLimit(1)
                 }
@@ -23,22 +23,29 @@ struct AskAutoBarView: View {
                 Spacer(minLength: 4)
 
                 Image(systemName: "mic.fill")
-                    .font(.system(size: 15))
+                    .font(.system(.subheadline))
                     .foregroundStyle(SkyLinkPalette.garageBlack)
                     .frame(width: 38, height: 38)
                     .background(SkyLinkPalette.torqueOrange, in: .circle)
             }
             .padding(14)
-            .background(SkyLinkPalette.steel, in: .rect(cornerRadius: 18))
+            // Translucent, so the log scrolls visibly underneath instead of
+            // disappearing behind an opaque slab. The bar reads as floating
+            // above the content, which is what it is.
+            .background(.ultraThinMaterial, in: .rect(cornerRadius: 18))
             .overlay {
                 RoundedRectangle(cornerRadius: 18)
-                    .stroke(SkyLinkPalette.torqueOrange, lineWidth: 1)
+                    .stroke(SkyLinkPalette.torqueOrange.opacity(0.7), lineWidth: 1)
             }
+            .shadow(color: .black.opacity(0.35), radius: 18, y: 6)
         }
-        .buttonStyle(.plain)
+        .buttonStyle(.card)
         .padding(.horizontal, 20)
         .padding(.bottom, 10)
-        .background(SkyLinkPalette.garageBlack)
+        .background(alignment: .top) {
+            ScrollEdgeFade(edge: .bottom, height: 28)
+                .offset(y: -28)
+        }
         .task { idle.start() }
         .onDisappear(perform: idle.stop)
     }

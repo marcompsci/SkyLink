@@ -2,6 +2,7 @@ import SwiftUI
 
 struct RootView: View {
     @Environment(AppRouter.self) private var router
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
         @Bindable var router = router
@@ -16,10 +17,16 @@ struct RootView: View {
         .overlay(alignment: .leading) {
             if router.isDrawerOpen {
                 DrawerView()
-                    .transition(.move(edge: .leading))
+                    // Enters and leaves along the same path it is dragged
+                    // along. Reduced motion gets a cross-fade instead.
+                    .transition(
+                        reduceMotion
+                            ? .opacity
+                            : .move(edge: .leading).combined(with: .opacity)
+                    )
             }
         }
-        .animation(.snappy(duration: 0.22), value: router.isDrawerOpen)
+        .animation(SkyMotion.respecting(reduceMotion, SkyMotion.drawer), value: router.isDrawerOpen)
     }
 
     @ViewBuilder

@@ -13,11 +13,11 @@ struct SOSSituationTile: View {
         Button(action: onTap) {
             VStack(alignment: .leading, spacing: 9) {
                 Image(systemName: situation.symbolName)
-                    .font(.system(size: 20))
+                    .font(.system(.title3))
                     .foregroundStyle(accent)
 
                 Text(situation.title)
-                    .font(.system(size: 15, weight: .semibold))
+                    .font(.system(.subheadline, weight: .semibold))
                     .foregroundStyle(SOSPalette.text)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -28,6 +28,6 @@ struct SOSSituationTile: View {
                     .stroke(isChosen ? accent : SOSPalette.border, lineWidth: isChosen ? 2 : 1)
             }
         }
-        .buttonStyle(.plain)
+        .buttonStyle(.card)
     }
 }

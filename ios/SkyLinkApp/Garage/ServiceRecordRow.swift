@@ -6,18 +6,18 @@ struct ServiceRecordRow: View {
     var body: some View {
         HStack(spacing: 12) {
             Image(systemName: record.performer == .you ? "wrench.adjustable.fill" : "building.2.fill")
-                .font(.system(size: 14))
+                .font(.system(.footnote))
                 .foregroundStyle(record.performer == .you ? SkyLinkPalette.oilTeal : SkyLinkPalette.grease)
                 .frame(width: 32, height: 32)
                 .background(SkyLinkPalette.garageBlack, in: .rect(cornerRadius: 9))
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(record.title)
-                    .font(.system(size: 14, weight: .semibold))
+                    .font(.system(.footnote, weight: .semibold))
                     .foregroundStyle(SkyLinkPalette.chrome)
 
                 Text(subtitle)
-                    .font(.system(size: 11.5, design: .monospaced))
+                    .font(.system(.caption, design: .monospaced))
                     .foregroundStyle(SkyLinkPalette.grease)
             }
 
@@ -25,7 +25,7 @@ struct ServiceRecordRow: View {
 
             if let cents = record.costCents {
                 Text((Double(cents) / 100).formatted(.currency(code: "USD").precision(.fractionLength(0))))
-                    .font(.system(size: 13, weight: .bold, design: .monospaced))
+                    .font(.system(.footnote, design: .monospaced, weight: .bold))
                     .foregroundStyle(SkyLinkPalette.chrome)
             }
         }

@@ -7,7 +7,7 @@ struct SOSEmergencyButton: View {
             HStack(spacing: 9) {
                 Image(systemName: "phone.fill")
                 Text("Fire, smoke or injury — call 911")
-                    .font(.system(size: 15, weight: .bold))
+                    .font(.system(.callout, weight: .bold))
             }
             .foregroundStyle(SkyLinkPalette.stopRed)
             .frame(maxWidth: .infinity)
@@ -15,5 +15,6 @@ struct SOSEmergencyButton: View {
             .background(SOSPalette.card, in: .rect(cornerRadius: 14))
             .overlay { RoundedRectangle(cornerRadius: 14).stroke(SOSPalette.border, lineWidth: 1.5) }
         }
+        .buttonStyle(.card)
     }
 }
